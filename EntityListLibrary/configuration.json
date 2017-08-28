@@ -1,0 +1,3 @@
+{
+  "ConnectionStrings": "Data Source=.\\SQLEXPRESS;Initial Catalog=SEMS;Integrated Security=True;MultipleActiveResultSets=True"
+}
