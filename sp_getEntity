@@ -1,0 +1,5 @@
+CREATE procedure [dbo].[sp_getEntity] @Type char(1)
+as
+SELECT object_id as Id, create_date as Created, [type] as [Type], name as Content 
+FROM Sys.Tables
+WHERE [type] = @Type
