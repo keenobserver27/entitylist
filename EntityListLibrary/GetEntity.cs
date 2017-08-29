@@ -49,7 +49,7 @@ namespace EntityListLibrary
             List<Entity> entities = new List<Entity>();
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                //assumption: stored procedure is present in the database where the connectionString is pointing
+                //assumption: stored procedure sp_getEntity is present in the database where the connectionString is pointing
                 SqlCommand cmd = new SqlCommand("sp_getEntity", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("Type", SqlDbType.Char);

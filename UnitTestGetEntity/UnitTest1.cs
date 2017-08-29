@@ -18,7 +18,7 @@ namespace UnitTestGetEntity
                 ent.Add(data);
             }
 
-            GetEntity a = new GetEntity("C:\\configuration.json", "U");
+            GetEntity a = new GetEntity("", "U");
             var list = a.EntityList(ent);
             Assert.IsNotNull(list, "No data found.");
         }
@@ -26,6 +26,7 @@ namespace UnitTestGetEntity
         [TestMethod]
         public void TestMethod2()
         {
+            //assumption: configuration file is stored in local drive c:
             GetEntity a = new GetEntity("C:\\configuration.json", "U");
             var list = a.EntityList(a.getData());
             Assert.IsNotNull(list, "No data found.");
